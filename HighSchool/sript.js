@@ -11,6 +11,13 @@ loginBtn.addEventListener("click", (e) =>{
     console.log(passwordRegex.test(password.value))
 
     if(!mailRegex.test(email.value) || !passwordRegex.test(password.value)) {
-        alert('Email ou senha Invalido')
+        document.getElementById("password").style.border = "2px Solid red"
+        document.getElementById("e-mail").style.border = "2px Solid red"
+        document.getElementById("password").style.backgroundColor = "#ff9999"
+        document.getElementById("e-mail").style.backgroundColor = "#ff9999"
+        document.getElementsByName("password")[0].placeholder = "Invalido"
+        document.getElementsByName("e-mail")[0].placeholder = "Invalido"
+        document.getElementById("password").style.color = "#d70000"
+        document.getElementById("e-mail").style.color = "#d70000"
     }
 })
